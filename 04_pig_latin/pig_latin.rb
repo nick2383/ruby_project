@@ -7,6 +7,10 @@ def translate(sentence)
 	sentence = sentence.collect do |word|
 		while(!(vowels.include?(word.byteslice(0))))
 			word = word + word.byteslice(0)
+			if(word.byteslice(0).downcase == "q")
+				word = word + word.byteslice(1)
+				word.slice!(0)
+			end
 			word.slice!(0)
 		end
 		word = word + "ay"
