@@ -1,3 +1,6 @@
+# 00_hello
+# Author: Nick Birch
+
 def hello
 	"Hello!"
 end
